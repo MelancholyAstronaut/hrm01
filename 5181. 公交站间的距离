@@ -1,4 +1,5 @@
-```python
+
+```java
 class Solution:
     def distanceBetweenBusStops(self, distance: List[int], start: int, destination: int) -> int:
         if len(distance)==1:
