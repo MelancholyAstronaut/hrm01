@@ -1,4 +1,5 @@
 ﻿1.数据库的时区不对
+set global time_zone='+8:00'
 2.pom.xml的配置
 <resources>
       <resource>
