@@ -10,7 +10,7 @@ class Solution {
         }
         return res;
     }
-
+    
     private int sum(int[] calories, int start, int end) {
         int res = 0;
         for(int i=start;i<end;i++){
