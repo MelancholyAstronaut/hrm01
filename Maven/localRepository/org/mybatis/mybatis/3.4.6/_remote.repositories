@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Sep 06 15:57:10 CST 2019
+mybatis-3.4.6.jar>alimaven=
+mybatis-3.4.6-javadoc.jar>alimaven=
+mybatis-3.4.6-sources.jar>alimaven=
+mybatis-3.4.6.pom>alimaven=
