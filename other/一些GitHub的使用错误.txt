@@ -1,0 +1,5 @@
+1.选择一个文件夹 git init   //如果是直接生成的当我没说
+2.ssh-keygen -t rsa -c "youname" 一直回车 ,然后出现"the key's randomart image is"
+就去/Users/username/.ssh/id_rsa.pub复制内容 加入GitHub
+https://github.com/settings/keys 这个里面
+3.现在就可以pull或者clone了
