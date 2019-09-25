@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--映射文件-->
+<mapper namespace="Dao.StudentDao">
+    <select id="FindAll" resultType="po.Student">
+        select * from student
+    </select>
+    <select id="findId" resultType="po.Student">
+        SELECT * FROM student WHERE id in
+        <foreach collection="arr" item="id_time" open="(" close=")" separator=",">
+            #{id_time}
+        </foreach>
+    </select>
+    <select id="findName" parameterType="String" resultType="po.Student">
+        select * from student where name like concat('%',#{name},'%')
+    </select>
+    <select id="findByCondition" resultType="po.Student" parameterType="map">
+        select * from student
+        <where>
+            <if test="name!=null and name!=''">
+                and name like concat('%',#{name},'%')
+            </if>
+            <if test="age!=null">
+                and age > #{age}
+            </if>
+
+        </where>
+    </select>
+    <insert id="InsertAfterReturnId" parameterType="po.Student" useGeneratedKeys="true" keyProperty="id">
+        insert into student (name,age,score) values
+        <foreach collection="userMap" item="map" separator=",">
+            (#{map.name},#{map.age},#{map.score})
+        </foreach>
+    </insert>
+    <delete id="deleteDuplicateData" parameterType="po.Student">
+     DELETE a FROM student a,student b WHERE a.id > b.id AND a.name = b.name
+    </delete>
+</mapper>
