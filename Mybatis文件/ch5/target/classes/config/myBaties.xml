@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--注册属性文件-->
+    <!--    <properties resource="jdbc.properties"/>-->
+    <!--定义别名-->
+    <properties resource="config/jdbc.properties"/>
+
+    <typeAliases>
+        <!--给指定类型定义别名-->
+        <!--<typeAlias type="com.abc.beans.Student" alias="Student"/>-->
+        <!--给指定包中所有实体类指定别名，别名默认就是该类的简单类名-->
+        <package name="po"/>
+    </typeAliases>
+
+    <environments default="mySql">
+        <environment id="mySql">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <package name="Dao"/>
+    </mappers>
+</configuration>

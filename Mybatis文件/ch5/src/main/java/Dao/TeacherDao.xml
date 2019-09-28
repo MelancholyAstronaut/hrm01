@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Dao.TeacherDao">
+    <resultMap id="Teacher2Student" type="teacher">
+        <id column="t_id" property="id"/>
+        <result column="t_name" property="name"/>
+         <collection property="students" ofType="student">
+             <id column="s_id" property="id"/>
+             <result column="s_name" property="name"></result>
+         </collection>
+
+    </resultMap>
+    <select id="find" resultMap="Teacher2Student" parameterType="int">
+        select t.id t_id,t.name t_name,s.id s_id,s.name s_name
+        from teacher t,student s
+        where
+        t.id=s.teacher_id
+        and
+        t.id=#{id}
+    </select>
+</mapper>
