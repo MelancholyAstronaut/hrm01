@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: com.edu.aynu.AppTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.588 s <<< FAILURE! - in com.edu.aynu.AppTest
+Test01(com.edu.aynu.AppTest)  Time elapsed: 1.541 s  <<< ERROR!
+org.apache.ibatis.exceptions.PersistenceException: 
+
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '}' at line 1
+### The error may exist in com/edu/aynu/Dao/bookDao.java (best guess)
+### The error may involve com.edu.aynu.Dao.bookDao.findBookById-Inline
+### The error occurred while setting parameters
+### SQL: select * from book where book.user_id={value}
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '}' at line 1
+	at com.edu.aynu.AppTest.Test01(AppTest.java:32)
+Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '}' at line 1
+	at com.edu.aynu.AppTest.Test01(AppTest.java:32)
+

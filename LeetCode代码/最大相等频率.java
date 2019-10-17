@@ -14,6 +14,10 @@ class Solution {
 				res=i+1;
 			}
 		}
+     	if(cur == nums.length){
+     		System.out.println(cur);
+     		return cur;
+     	}
 		if(cur == 1) return nums.length;
 		return res;
 	}
