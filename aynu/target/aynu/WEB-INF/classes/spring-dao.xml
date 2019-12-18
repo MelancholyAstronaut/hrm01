@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       https://www.springframework.org/schema/util/spring-util.xsd">
+    <!--配置数据库-->
+    <!--在这里也可以选择用properties-->
+    <bean id="myDataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql:///oa"/>
+        <property name="username" value="root"/>
+        <property name="password" value="123456"/>
+    </bean>
+
+    <!--注册SqlSessionFactory对象-->
+    <bean id="mySqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="myDataSource"/>
+        <property name="configLocation" value="classpath:mybatis-config.xml"/>
+    </bean>
+
+    <!--注册Dao的代理对象-->
+    <!--<bean id="IStudentDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
+        <property name="mapperInterface" value="com.abc.dao.IStudentDao"/>
+        <property name="sqlSessionFactory" ref="mySqlSessionFactory"/>
+    </bean>-->
+    <!--使用MapperScannerConfigurer时，生成的代理对象名称为对应接口的简单类名-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.abc.dao"/>
+        <property name="sqlSessionFactoryBeanName" value="mySqlSessionFactory"/>
+    </bean>
+</beans>

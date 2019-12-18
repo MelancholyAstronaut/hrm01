@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.abc.dao.INewsManagerDao">
+
+    <select id="selectNewsLabelByChild" resultMap="Newslabel">
+         select ID,label_name,label_content,pid from newlabel where ID=#{pid}
+    </select>
+    <resultMap id="Newslabel" type="Newslabel">
+        <id column="ID" property="ID"/>
+        <result column="label_name" property="label_name"/>
+        <result column="label_content" property="label_content"/>
+        <collection property="parent" select="selectNewsLabelByChild" column="pid" javaType="Newslabel">
+
+        </collection>
+    </resultMap>
+    <select id="checkAllLable" resultMap="Newslabel">
+        select ID,label_name,label_content,pid from newlabel limit #{pages},3;
+    </select>
+     <select id="checkCount" resultType="int">
+        select count(ID) from newlabel;
+    </select>
+    <select id="queryById" resultType="Newslabel">
+        select * from newlabel where ID=#{id}
+    </select>
+    <update id="update" parameterType="map">
+        update newlabel set label_name=#{newslabel.label_name},pid=#{pid},label_content=#{newslabel.label_content} where ID=#{newslabel.ID}
+    </update>
+    <select id="queryAllChlidByParentId" resultMap="Newslabel">
+         select * from newlabel where pid=#{id} limit #{pages},3
+    </select>
+
+    <update id="addLabel" parameterType="Newslabel">
+        insert into oa.newlabel set label_name=#{label_name},label_content=#{label_content},pid=#{parent.ID};
+    </update>
+
+
+</mapper>
+
