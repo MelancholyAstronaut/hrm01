@@ -5,15 +5,14 @@ import com.abc.pojo.Newslabel;
 import lombok.Setter;
 
 import java.util.List;
-import java.util.Map;
 
-public class INewsManagerServicesImpl  implements INewsManagerServices{
+public class INewsManagerServicesImpl implements INewsManagerServices {
     @Setter
     private INewsManagerDao iNewsManagerDao;
 
     @Override
-    public List<Newslabel> checkAllLable(int pages) {
-        return iNewsManagerDao.checkAllLable( pages);
+    public List<Newslabel> checkAllLable() {
+        return iNewsManagerDao.checkAllLable();
     }
 
     @Override
@@ -23,7 +22,7 @@ public class INewsManagerServicesImpl  implements INewsManagerServices{
 
     @Override
     public void deleteOne(int id) {
-         iNewsManagerDao.deleteOne(id);
+        iNewsManagerDao.deleteOne(id);
     }
 
     @Override
@@ -37,8 +36,8 @@ public class INewsManagerServicesImpl  implements INewsManagerServices{
     }
 
     @Override
-    public void update(Map<String, Object> newslabel) {
-         iNewsManagerDao.update(newslabel);
+    public void update(Newslabel newslabel) {
+        iNewsManagerDao.update(newslabel);
     }
 
     @Override
@@ -53,12 +52,22 @@ public class INewsManagerServicesImpl  implements INewsManagerServices{
     }
 
     @Override
-    public List<Newslabel> queryAllChlidByParentId(int id,int pages) {
-        return iNewsManagerDao.queryAllChlidByParentId(id,pages);
+    public List<Newslabel> queryAllChlidByParentId(int id) {
+        return iNewsManagerDao.queryAllChlidByParentId(id);
     }
 
     @Override
     public void addLabel(Newslabel newslabel) {
-         iNewsManagerDao.addLabel(newslabel);
+        iNewsManagerDao.addLabel(newslabel);
+    }
+
+    @Override
+    public int queryPidById(int id) {
+        return iNewsManagerDao.queryPidById(id);
+    }
+
+    @Override
+    public Integer login(String name, String pwd) {
+        return iNewsManagerDao.login(name,pwd);
     }
 }

@@ -169,7 +169,7 @@
                                                     <td width="19"><img src="../images/tree_07.gif" width="19" height="20"></td>
                                                     <td width="19"><img src="../images/tree_14.gif" width="19" height="20"></td>
 <%--                                                    这个地方要改--%>
-                                                    <td nowrap><a href="${pageContext.request.contextPath}/newsLabel/checkAll?pages=0" target="mainFrame" class="a03">栏目管理</a></td>
+                                                    <td nowrap><a href="${pageContext.request.contextPath}/newsLabel/checkAll" target="mainFrame" class="a03">栏目管理</a></td>
                                                 </tr>
                                             </table>
                                             <table width="100%" border="0" cellspacing="0" cellpadding="0">

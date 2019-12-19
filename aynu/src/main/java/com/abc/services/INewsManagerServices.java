@@ -3,10 +3,9 @@ package com.abc.services;
 import com.abc.pojo.Newslabel;
 
 import java.util.List;
-import java.util.Map;
 
 public interface INewsManagerServices {
-    List<Newslabel> checkAllLable(int pages);
+    List<Newslabel> checkAllLable();
 
     int checkCount();
 
@@ -16,14 +15,19 @@ public interface INewsManagerServices {
 
     int queryIdByName(String select2);
 
-    void update(Map<String, Object> newslabel);
+    void update(Newslabel newslabel);
 
     List<Newslabel> checkAllParentLable();
 
 
     int queryCountChlidByParentId(int id);
 
-    List<Newslabel> queryAllChlidByParentId(int id,int pages);
+    List<Newslabel> queryAllChlidByParentId(int id);
 
     void addLabel(Newslabel newslabel);
+
+
+    int queryPidById(int id);
+
+    Integer login(String name, String pwd);
 }

@@ -9,5 +9,6 @@ public class demo {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
         INewsManagerServicesImpl iNewsManagerServices = (INewsManagerServicesImpl) applicationContext.getBean("newsManagerServices");
 
+
     }
 }

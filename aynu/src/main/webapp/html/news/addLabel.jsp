@@ -54,7 +54,7 @@
             </tr>
             <tr>
                 <td class="td_02">上级栏目名称</td>
-                <td class="td_02"><select name="parent.ID" class="input" style="width:99% ">
+                <td class="td_02"><select name="pid" class="input" style="width:99% ">
                     <c:forEach items="${allParentLabel}" var="eachParent">
                         <option value="${eachParent.ID}" selected>${eachParent.label_name}</option>
                     </c:forEach>

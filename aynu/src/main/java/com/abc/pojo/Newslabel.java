@@ -61,6 +61,14 @@ public class Newslabel {
         this.parent = parent;
     }
 
+    public Integer getPid() {
+        return pid;
+    }
+
+    public void setPid(Integer pid) {
+        this.pid = pid;
+    }
+
     @Override
     public String toString() {
         return "Newslabel{" +
