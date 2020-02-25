@@ -69,7 +69,6 @@ var App = function () {
         // remove sidebar toggler if window width smaller than 900(for table and phone mode)
         var _handleSidebar = function () {
             if ($(window).width() < 900) {
-                $.cookie('sidebar-closed', null);
                 $('.page-container').removeClass("sidebar-closed");
             }
         }
@@ -230,7 +229,7 @@ var App = function () {
             var container = $(".page-container");
             if (container.hasClass("sidebar-closed") === true) {
                 container.removeClass("sidebar-closed");
-                $.cookie('sidebar-closed', null);
+
             } else {
                 container.addClass("sidebar-closed");
                 $.cookie('sidebar-closed', 1);

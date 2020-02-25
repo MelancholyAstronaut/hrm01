@@ -13,4 +13,7 @@
     <typeAliases>
         <package name="com.hrm.commons.beans"/>
     </typeAliases>
+    <mappers>
+        <package name="generator"/>
+    </mappers>
 </configuration>

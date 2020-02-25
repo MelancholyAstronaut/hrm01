@@ -6,7 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="639b7dd4-737c-46a9-9043-ecf4c7cca7fd" name="Default Changelist" comment="" />
+    <list default="true" id="639b7dd4-737c-46a9-9043-ecf4c7cca7fd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/abc/controller/NewsLabelManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/abc/controller/NewsLabelManagement.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -369,6 +371,9 @@
       <workItem from="1582116969884" duration="664000" />
       <workItem from="1582195388851" duration="436000" />
       <workItem from="1582199163222" duration="6000" />
+      <workItem from="1582524943701" duration="1077000" />
+      <workItem from="1582526038438" duration="555000" />
+      <workItem from="1582527142626" duration="2493000" />
     </task>
     <servers />
   </component>
@@ -420,10 +425,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="449" y="15" key="#index.jsp/0.0.1536.824@0.0.1536.824" timestamp="1575601088164" />
-    <state x="548" y="153" key="FileChooserDialogImpl" timestamp="1576658758055">
+    <state x="548" y="153" key="FileChooserDialogImpl" timestamp="1582526045359">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1576658758055" />
+    <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1582526045359" />
     <state width="1243" height="198" key="GridCell.Tab.0.bottom" timestamp="1576740338148">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

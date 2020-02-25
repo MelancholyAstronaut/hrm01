@@ -96,6 +96,7 @@ public class NewsLabelManagement {
         //0.查询上级
         List<Newslabel> allParentLabel = iNewsManagerServices.checkAllParentLable();
         model.addAttribute("allParentLabel", allParentLabel);
+
         PageHelper.startPage(pageNum, 3);
         //2.查询父栏目下面的子栏目
         List<Newslabel> allChild = iNewsManagerServices.queryAllChlidByParentId(id);
