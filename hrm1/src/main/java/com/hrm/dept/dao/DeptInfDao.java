@@ -2,16 +2,16 @@ package com.hrm.dept.dao;
 
 import com.hrm.commons.beans.DeptInf;
 
+import java.util.List;
+
 public interface DeptInfDao {
-    int deleteByPrimaryKey(Integer id);
+    List<DeptInf> selectAllDept(DeptInf deptInf);
 
-    int insert(DeptInf record);
+    void AddDept(DeptInf dept);
 
-    int insertSelective(DeptInf record);
+    void removeDept(Integer id);
 
-    DeptInf selectByPrimaryKey(Integer id);
+    DeptInf selectOneDept(Integer id);
 
-    int updateByPrimaryKeySelective(DeptInf record);
-
-    int updateByPrimaryKey(DeptInf record);
+    void updateOneDept(DeptInf d);
 }

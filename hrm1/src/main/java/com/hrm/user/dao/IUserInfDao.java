@@ -11,4 +11,11 @@ public interface IUserInfDao {
     List<UserInf> findUser(UserInf user);
 
     UserInf findUserById(int id);
+
+    void removeUser(Integer id);
+
+    UserInf findUserByLoginUser(UserInf user);
+
+    void modifyUser(UserInf user);
+    void addUser(UserInf user);
 }

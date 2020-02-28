@@ -13,24 +13,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @Controller
 @RequestMapping("/user")
 public class UserController {
     @Autowired
-    @Qualifier("userService")
-    UserService userService;
+    @Qualifier("UserService")
+    private UserService userService;
 
     @RequestMapping("/login")
-    public String verifyName(String loginname, String password, HttpServletRequest request) {
-        Map user = new HashMap();
-        user.put("name", loginname);
-        user.put("password", password);
-
-        UserInf u = userService.selectByNameAndPassword(user);
+    public String login(UserInf user, HttpServletRequest request) {
+        //  System.out.println(user);
+        UserInf u = userService.findUserByLoginUser(user);
+        //  System.out.println(u);
         if (u == null) {
             request.setAttribute("message", "用户名或者密码错误");
             return "../index";
@@ -43,7 +39,7 @@ public class UserController {
     @RequestMapping("/logout")
     public String logout(HttpServletRequest request) {
         request.getSession().removeAttribute("user");
-        return "redirect:../index.jsp";
+        return "redirect:../index";
     }
 
     @RequestMapping("/findUser")
@@ -61,9 +57,30 @@ public class UserController {
     public String UpdateUser(@PathVariable int id, Model model) {
         //根据id查询用户
         UserInf user = userService.findUserById(id);
-
         model.addAttribute("user", user);
         return "user/showUpdateUser";
 
     }
+
+    @RequestMapping("/removeUser/{id}")
+    public String removeUser(@PathVariable Integer id) {
+        // System.out.println("即将删除的id =>>>>>>>>>" + id);
+        userService.removeUser(id);
+        return "redirect:/user/findUser";
+    }
+
+    @RequestMapping("/updateUser")
+    public String updateUser(UserInf user) {
+        //System.out.println(user);
+        //UserInf(id=2, loginname=qiu, password=123456, status=1, createdate=null, username=邱一)
+        userService.modifyUser(user);
+        return "redirect:/user/findUser";
+    }
+
+    @RequestMapping("/addUser")
+    public String addUser(UserInf user) {
+        userService.addUser(user);
+        return "redirect:/user/findUser";
+    }
+
 }
