@@ -22,7 +22,10 @@
 	<script src="${pageContext.request.contextPath}/js/ligerUI/js/plugins/ligerDialog.js" type="text/javascript"></script>
 	<script src="${pageContext.request.contextPath}/js/ligerUI/js/plugins/ligerResizable.jss" type="text/javascript"></script>
 	<link href="${pageContext.request.contextPath}/css/pager.css" type="text/css" rel="stylesheet" />
-	<script type="text/javascript">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script type="text/javascript">
 		$(function(){
 	 	   /** 获取上一次选中的部门数据 */
 	 	   var boxs  = $("input[type='checkbox'][id^='box_']");
@@ -122,17 +125,29 @@
 				</tr>
 			</c:forEach>
 		  </table>
+            <div align="center">
+                <p>当前是 ${page.pageNum}页 / ${page.pages} 页</p>
+                <ul class="pager">
+                    <li>
+                        <a href="/job/selectJob/?pageNum=${page.navigateFirstPage}">首页</a>
+                    </li>
+                    <li>
+                        <a href="/job/selectJob/?pageNum=${page.prePage}"
+                           class="disabled">上一页</a>
+                    </li>
+                    <li>
+                        <a href="/job/selectJob/?pageNum=${page.nextPage}">下一页</a>
+                    </li>
+                    <li>
+                        <a href="/job/selectJob/?pageNum=${page.navigateLastPage}">尾页</a>
+                    </li>
+
+                </ul>
+            </div>
 		</td>
 	  </tr>
 	  <!-- 分页标签 -->
-	  <tr valign="top"><td align="center" class="font3">
-	  	 <fkjava:pager
-	  	        pageIndex="${requestScope.pageModel.pageIndex}" 
-	  	        pageSize="${requestScope.pageModel.pageSize}" 
-	  	        recordCount="${requestScope.pageModel.recordCount}" 
-	  	        style="digg"
-	  	        submitUrl="${pageContext.request.contextPath}/job/selectJob?pageIndex={0}"/>
-	  </td></tr>
+
 	</table>
 	<div style="height:10px;"></div>
 </body>

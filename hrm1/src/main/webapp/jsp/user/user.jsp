@@ -127,7 +127,7 @@
                 <c:forEach items="${userList}" var="eachUser">
                     <tr id="data_${stat.index}" align="center" class="main_trbg" onMouseOver="move(this);"
                         onMouseOut="out(this);">
-                        <td><input type="checkbox" id="box_${stat.index}" value="${eachUser.id}"></td>
+                        <td>< input type="checkbox" id="box_${stat.index}" value="${eachUser.id}"></td>
                         <td>${eachUser.loginname}</td>
                         <td>${eachUser.password}</td>
                         <td>${eachUser.username}</td>

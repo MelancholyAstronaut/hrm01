@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql:///hrm
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  thymeleaf:
+    cache: false
+server:
+  tomcat:
+    uri-encoding: UTF-8
+  port: 9999
+logging:
+  level:
+    com.hrm.aynu_qhj.user.dao:
+      mapping: DEBUG
+pagehelper:
+  reasonable: true
+  supportMethodsArguments: true
+  auto-dialect: mysql
+mybatis-plus:
+  type-aliases-package: com.hrm.aynu_qhj.beans
+  mapper-locations: classpath*:mybatis/mapper/*.xml

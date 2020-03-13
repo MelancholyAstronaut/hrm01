@@ -27,6 +27,31 @@
             </Config>
           </value>
         </entry>
+        <entry key="job_inf">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="JobInfDao" />
+              <option name="daoPackage" value="com.hrm.job.dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="JobInf" />
+              <option name="modelPackage" value="generate" />
+              <option name="name" value="job_inf" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="ID" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="job_inf" />
+              <option name="useLombokPlugin" value="true" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="useTableNameAlias" value="true" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="com.hrm.job.dao" />
+            </Config>
+          </value>
+        </entry>
         <entry key="user_inf">
           <value>
             <Config>

@@ -81,7 +81,7 @@
         <tr valign="top" id="submenu2" style="display: none">
             <td class="left_nav_bgshw" height="50">
                 <p class="left_nav_link"><img src="${pageContext.request.contextPath}/images/left_nav_arrow.gif">&nbsp;&nbsp;<a
-                        href="job/job.jsp" target="main">职位查询</a></p>
+                        href="${pageContext.request.contextPath}/job/selectJob" target="main">职位查询</a></p>
                 <p class="left_nav_link"><img src="${pageContext.request.contextPath}/images/left_nav_arrow.gif">&nbsp;&nbsp;<a
                         href="job/showAddJob.jsp" target="main">添加职位</a></p>
             </td>

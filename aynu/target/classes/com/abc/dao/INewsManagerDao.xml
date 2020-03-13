@@ -16,25 +16,32 @@
         </collection>
     </resultMap>
     <select id="checkAllLable" resultMap="Newslabel">
-        select ID,label_name,label_content,pid from newlabel limit #{pages},3;
+        select ID,label_name,label_content,pid from newlabel
     </select>
-     <select id="checkCount" resultType="int">
+    <select id="checkCount" resultType="int">
         select count(ID) from newlabel;
     </select>
     <select id="queryById" resultType="Newslabel">
         select * from newlabel where ID=#{id}
     </select>
-    <update id="update" parameterType="map">
-        update newlabel set label_name=#{newslabel.label_name},pid=#{pid},label_content=#{newslabel.label_content} where ID=#{newslabel.ID}
+    <update id="update" parameterType="Newslabel">
+        update newlabel set label_name=#{label_name},pid=#{pid},label_content=#{label_content} where ID=#{ID}
     </update>
     <select id="queryAllChlidByParentId" resultMap="Newslabel">
-         select * from newlabel where pid=#{id} limit #{pages},3
+         select * from newlabel where pid=#{id}
     </select>
 
     <update id="addLabel" parameterType="Newslabel">
-        insert into oa.newlabel set label_name=#{label_name},label_content=#{label_content},pid=#{parent.ID};
+        insert into oa.newlabel set label_name=#{label_name},label_content=#{label_content},pid=#{pid};
     </update>
-
-
+    <select id="allLabel" resultType="Newslabel">
+        select * from newlabel
+    </select>
+    <select id="checkAllParentLable" resultType="Newslabel">
+    select * from newlabel where pid is NULL
+    </select>
+    <select id="login" resultType="int">
+        select id from account where name=#{name} and password=#{pwd}
+    </select>
 </mapper>
 
