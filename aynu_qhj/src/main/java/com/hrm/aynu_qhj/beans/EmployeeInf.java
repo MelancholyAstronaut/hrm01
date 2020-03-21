@@ -9,16 +9,14 @@ import java.util.Date;
 /**
  * employee_inf
  *
- * @author
+ * @author: qhj
  */
 @Data
 @Alias("emp")
 public class EmployeeInf implements Serializable {
     private Integer id;
-
-    private Integer deptId;
-
-    private Integer jobId;
+    private DeptInf dept;
+    private JobInf job;
 
     private String name;
 
@@ -53,10 +51,6 @@ public class EmployeeInf implements Serializable {
     private String remark;
 
     private Date createDate;
-
-    private JobInf job;
-
-    private DeptInf dept;
 
     private static final long serialVersionUID = 1L;
 }

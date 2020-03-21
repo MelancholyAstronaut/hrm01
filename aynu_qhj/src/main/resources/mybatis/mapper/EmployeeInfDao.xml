@@ -1,10 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hrm.aynu_qhj.employee.dao.EmployeeInfDao">
-    <resultMap id="defineRule" type="emp">
-        <id property="id"/>
+    <select id="selectAll" resultMap="a">
+        select *
+        from employee_inf
+        <where>
+            <if test="job!=null">
+                job_id = #{job.id}
+            </if>
+            <if test="name !=null and name !=''">
+                and name like '%' #{name} '%'
+            </if>
+            <if test="cardId !=null and cardId!= ''">
+                and cardId like '%' #{cardId} '%'
+            </if>
+            <if test="sex >0">
+                and sex = #{sex}
+            </if>
+            <if test="phone !=null and phone!= ''">
+                and phone like '%' #{phone} '%'
+            </if>
+            <if test="dept!=null">
+                and dept_id = #{dept.id}
+            </if>
+        </where>
+    </select>
+    <select id="selectDept" resultType="dept">
+        select *
+        from dept_inf
+        where ID = ${dept_id}
+    </select>
+    <select id="selectJob" resultType="job">
+        select *
+        from job_inf
+        where ID = ${job_id}
+    </select>
+
+    <resultMap id="a" type="emp">
+        <id property="id" column="id"></id>
+        <association property="dept"
+                     javaType="dept"
+                     column="dept_id"
+                     select="selectDept"></association>
+        <association property="job"
+                     javaType="job" column="job_id" select="selectJob"></association>
+
     </resultMap>
-  <select id="selectAll" resultMap="defineRule">
-        select * from employee_inf
-  </select>
+
+    <select id="selectAllJob" resultType="job">
+        select *
+        from job_inf
+
+    </select>
+    <select id="selectAllDept" resultType="dept">
+        select *
+        from dept_inf
+    </select>
+
+
 </mapper>
