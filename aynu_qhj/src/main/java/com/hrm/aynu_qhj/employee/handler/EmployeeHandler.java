@@ -10,6 +10,8 @@ import com.hrm.aynu_qhj.employee.dao.EmployeeInfDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -51,4 +53,28 @@ public class EmployeeHandler {
         return "html/employee/employee";
     }
 
+    /**
+     * @param id 传过来的emp的id
+     * @return
+     */
+    @GetMapping("/updateEmployee")
+    public String updateEmployee(int id, Model model) {
+        EmployeeInf emp = employeeInfDao.selectById(id);
+        //查询所有job
+        List<JobInf> jobInfList = employeeInfDao.selectAllJob();
+        //查询所有dept
+        List<DeptInf> deptInfList = employeeInfDao.selectAllDept();
+        model.addAttribute("jobList", jobInfList);
+        model.addAttribute("deptInfList", deptInfList);
+        model.addAttribute("employee", emp);
+        return "html/employee/showUpdateEmployee";
+    }
+
+    @PostMapping("/updateEmployee")
+    public String updateEmployee(EmployeeInf emp) {
+        int row = employeeInfDao.update(emp);
+        System.out.println(emp);
+
+        return "error";
+    }
 }

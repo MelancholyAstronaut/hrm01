@@ -2,6 +2,7 @@ package com.hrm.aynu_qhj.beans;
 
 import lombok.Data;
 import org.apache.ibatis.type.Alias;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -38,6 +39,7 @@ public class EmployeeInf implements Serializable {
 
     private String party;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date birthday;
 
     private String race;

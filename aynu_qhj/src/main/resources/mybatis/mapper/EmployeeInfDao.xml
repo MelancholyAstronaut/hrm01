@@ -56,6 +56,69 @@
         select *
         from dept_inf
     </select>
-
-
+    <select id="selectById" resultMap="a" parameterType="int">
+        select *
+        from employee_inf
+        where ID = #{id}
+    </select>
+    <!--通过主键修改数据-->
+    <update id="update">
+        update hrm.employee_inf
+        <set>
+            DEPT_ID = #{dept.id},
+            JOB_ID = #{job.id},
+            <if test="name != null and name != ''">
+                NAME = #{name},
+            </if>
+            <if test="cardId != null and cardId != ''">
+                CARD_ID = #{cardId},
+            </if>
+            <if test="address != null and address != ''">
+                ADDRESS = #{address},
+            </if>
+            <if test="postCode != null and postCode != ''">
+                POST_CODE = #{postCode},
+            </if>
+            <if test="tel != null and tel != ''">
+                TEL = #{tel},
+            </if>
+            <if test="phone != null and phone != ''">
+                PHONE = #{phone},
+            </if>
+            <if test="qqNum != null and qqNum != ''">
+                QQ_NUM = #{qqNum},
+            </if>
+            <if test="email != null and email != ''">
+                EMAIL = #{email},
+            </if>
+            <if test="sex != null">
+                SEX = #{sex},
+            </if>
+            <if test="party != null and party != ''">
+                PARTY = #{party},
+            </if>
+            <if test="birthday != null">
+                BIRTHDAY = #{birthday},
+            </if>
+            <if test="race != null and race != ''">
+                RACE = #{race},
+            </if>
+            <if test="education != null and education != ''">
+                EDUCATION = #{education},
+            </if>
+            <if test="speciality != null and speciality != ''">
+                SPECIALITY = #{speciality},
+            </if>
+            <if test="hobby != null and hobby != ''">
+                HOBBY = #{hobby},
+            </if>
+            <if test="remark != null and remark != ''">
+                REMARK = #{remark},
+            </if>
+            <if test="createDate != null">
+                CREATE_DATE = #{createDate},
+            </if>
+        </set>
+        where ID = #{id}
+    </update>
 </mapper>

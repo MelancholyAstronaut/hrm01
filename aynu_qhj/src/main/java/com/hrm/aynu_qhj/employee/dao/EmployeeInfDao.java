@@ -11,10 +11,14 @@ import java.util.List;
 
 @Mapper
 public interface EmployeeInfDao extends BaseMapper<EmployeeInf> {
+
     List<EmployeeInf> selectAll(EmployeeInf example);
 
     List<JobInf> selectAllJob();
 
     List<DeptInf> selectAllDept();
 
+    EmployeeInf selectById(int id);
+
+    int update(EmployeeInf emp);
 }

@@ -159,7 +159,7 @@
                     <td th:text="${employee.address }"></td>
                     <td th:text="${#dates.format(employee.createDate,'yyyy-MM-dd')}">
                     </td>
-                    <td align="center" width="40px;"><a href="/employee/updateEmployee?flag=1&id=${employee.id}">
+                    <td align="center" width="40px;"><a th:href="@{/employee/updateEmployee(flag=1,id=${employee.id})}">
                         <img src="/images/update.gif" title="修改"/></a>
                     </td>
                 </tr>
