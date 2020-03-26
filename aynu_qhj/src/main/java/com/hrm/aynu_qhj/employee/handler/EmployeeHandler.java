@@ -36,7 +36,7 @@ public class EmployeeHandler {
             DeptInf temp = new DeptInf();
             temp.setId(dept_id);
             emp.setDept(temp);
-        }
+    }
         PageHelper.startPage(pageNum, 3);
         List<EmployeeInf> employeeInfList = employeeInfDao.selectAll(emp);
         System.out.println(employeeInfList);
