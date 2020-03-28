@@ -104,12 +104,12 @@
             <table border="0" cellpadding="0" cellspacing="10" class="main_tab" width="100%">
                 <tr>
                     <td class="fftd">
-                        <form action="/notice/selectNotice" id="noticeform" method="post" name="noticeform">
+                        <form id="noticeform" method="post" name="noticeform" th:action="@{/notice/noticeAll}">
                             <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                 <tr>
                                     <td class="font3">
-                                        公告名称：<input name="title" type="text">
-                                        公告内容：<input name="content" type="text">
+                                        公告名称：<input name="title" th:value="${noticeInf.title}" type="text">
+                                        公告内容：<input name="content" th:value="${noticeInf.content}" type="text">
                                         <input type="submit" value="搜索"/>
                                         <input id="delete" type="button" value="删除"/>
                                     </td>
@@ -167,7 +167,7 @@
             <a th:href="@{/notice/noticeAll/(pageNum=${page.navigateFirstPage})}">首页</a>
         </li>
         <li>
-            <a th:href="@{/notice/noticeAll/(pageNum=${page.prePage})}">上一页</a>
+            <a th:href="@{/notice/noticeAll/(pageNum=${page.prePage},id)}">上一页</a>
         </li>
         <li>
             <a th:href="@{/notice/noticeAll/(pageNum=${page.nextPage})}">下一页</a>
