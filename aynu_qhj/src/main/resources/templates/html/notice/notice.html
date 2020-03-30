@@ -138,7 +138,7 @@
                     <td>预览</td>
                 </tr>
                 <tr align="center"
-                    class="main_trbg" onMouseOut="out(this);" onMouseOver="move(this);"
+                    class="main_trbg"
                     th:each="notice:${notices}"
                     th:id="'data_' + ${noticeStat.index}">
                     <td><input th:id="'box_' + ${noticeStat.index}" th:value="${notice.id}" type="checkbox"></td>
@@ -147,11 +147,11 @@
                     <td th:text="${#dates.format(notice.createDate,'yyyy-MM-dd') }">
                     </td>
                     <td th:text="${notice.userId }"></td>
-                    <td align="center" width="40px;"><a th:href="@{/notice/updateNotice(flag=1,id=${notice.id})}">
+                    <td align="center" width="40px;"><a th:href="@{/notice/updateNotice(id=${notice.id})}">
                         <img src="/images/update.gif" title="修改"/></a>
                     </td>
                     <td align="center" width="40px">
-                        <a href="#" th:id="'prev_' + ${noticeStat.index}">
+                        <a href="#" th:id="'prev_' + ${notice.id}">
                             <img src="/images/prev.gif" title="预览"/></a>
                     </td>
                 </tr>
@@ -162,18 +162,19 @@
 
 </table>
 <div align="center">
+    <p th:text="'当前是'+ ${page.pageNum} +'页 /'+ ${page.pages} +'页'"></p>
     <ul class="pager">
         <li>
-            <a th:href="@{/notice/noticeAll/(pageNum=${page.navigateFirstPage})}">首页</a>
+            <a th:href="@{/notice/noticeAll/(pageNum=${page.navigateFirstPage},title=${noticeInf.getTitle()},content=${noticeInf.getContent()})}">首页</a>
         </li>
         <li>
-            <a th:href="@{/notice/noticeAll/(pageNum=${page.prePage},id)}">上一页</a>
+            <a th:href="@{/notice/noticeAll/(pageNum=${page.prePage},title=${noticeInf.getTitle()},content=${noticeInf.getContent()})}">上一页</a>
         </li>
         <li>
-            <a th:href="@{/notice/noticeAll/(pageNum=${page.nextPage})}">下一页</a>
+            <a th:href="@{/notice/noticeAll/(pageNum=${page.nextPage},title=${noticeInf.getTitle()},content=${noticeInf.getContent()})}">下一页</a>
         </li>
         <li>
-            <a th:href="@{/notice/noticeAll/(pageNum=${page.navigateLastPage})}">尾页</a>
+            <a th:href="@{/notice/noticeAll/(pageNum=${page.navigateLastPage},title=${noticeInf.getTitle()},content=${noticeInf.getContent()})}">尾页</a>
         </li>
     </ul>
 
