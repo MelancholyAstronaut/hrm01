@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="760094d3-9519-4e36-aa0f-4a887607d7a4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/mybatis_Spring01/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis_Spring01/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis_plus01/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis_plus01/src/main/resources/log4j.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../aynu_qhj/src/main/java/com/hrm/aynu_qhj/beans/EmployeeInf.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../aynu_qhj/src/main/java/com/hrm/aynu_qhj/beans/EmployeeInf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../aynu_qhj/src/main/java/com/hrm/aynu_qhj/employee/dao/EmployeeInfDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../aynu_qhj/src/main/java/com/hrm/aynu_qhj/employee/dao/EmployeeInfDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../aynu_qhj/src/main/java/com/hrm/aynu_qhj/employee/handler/EmployeeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../aynu_qhj/src/main/java/com/hrm/aynu_qhj/employee/handler/EmployeeHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../aynu_qhj/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../aynu_qhj/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../aynu_qhj/src/main/resources/mybatis/mapper/EmployeeInfDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../aynu_qhj/src/main/resources/mybatis/mapper/EmployeeInfDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../aynu_qhj/src/main/resources/templates/html/employee/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../aynu_qhj/src/main/resources/templates/html/employee/employee.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../aynu_qhj/src/main/resources/templates/html/left.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../aynu_qhj/src/main/resources/templates/html/left.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../olss" beforeDir="false" afterPath="$PROJECT_DIR$/../../olss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -177,6 +171,7 @@
       <workItem from="1584006509830" duration="57000" />
       <workItem from="1584010164291" duration="19000" />
       <workItem from="1584339901120" duration="126000" />
+      <workItem from="1585997539739" duration="46000" />
     </task>
     <servers />
   </component>

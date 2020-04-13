@@ -36,7 +36,7 @@ public class EmployeeHandler {
             DeptInf temp = new DeptInf();
             temp.setId(dept_id);
             emp.setDept(temp);
-    }
+        }
         PageHelper.startPage(pageNum, 3);
         List<EmployeeInf> employeeInfList = employeeInfDao.selectAll(emp);
         System.out.println(employeeInfList);
@@ -76,5 +76,24 @@ public class EmployeeHandler {
         System.out.println(emp);
 
         return "error";
+    }
+
+    @GetMapping("/showAddEmployee")
+    public String showAddEmployee(Model model) {
+        //job
+        //查询所有job
+        List<JobInf> jobInfList = employeeInfDao.selectAllJob();
+        //查询所有dept
+        List<DeptInf> deptInfList = employeeInfDao.selectAllDept();
+        model.addAttribute("jobList", jobInfList);
+        model.addAttribute("deptInfList", deptInfList);
+        return "html/employee/showAddEmployee";
+    }
+
+    @PostMapping("addEmployee")
+    public String addEmployee(EmployeeInf emp) {
+        System.out.println(emp);
+        employeeInfDao.insert(emp);
+        return "redirect:employee/allEmployee";
     }
 }

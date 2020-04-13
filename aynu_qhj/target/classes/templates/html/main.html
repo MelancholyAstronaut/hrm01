@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>人事管理系统 </title>
+    <link href="/static/images/fkjava.ico" rel="shortcut icon" type="image/x-icon"/>
+    <link href="/css/css.css" type="text/css" rel="stylesheet"/>
+</head>
+<frameset rows="80,*" cols="*" frameborder="no" border="0" framespacing="0">
+    <frame th:src="@{/templates/html/top.html}" name="title" scrolling="no" noresize="noresize">
+    <frameset cols="220,*" frameborder="no" border="0" framespacing="0">
+        <frame th:src="@{/templates/html/left.html}" name="tree" scrolling="no" marginheight="0" marginwidth="0">
+        <frame th:src="@{/templates/html/right.html}" name="main" scrolling="yes" frameborder="0" marginwidth="0"
+               marginheight="0" noresize="noresize">
+    </frameset>
+</frameset>
+<body>
+</body>
+</html>

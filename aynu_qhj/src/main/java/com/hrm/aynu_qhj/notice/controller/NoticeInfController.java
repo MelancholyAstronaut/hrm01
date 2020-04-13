@@ -86,4 +86,17 @@ public class NoticeInfController {
         int noticeInf = noticeInfDao.update(notice, updateWrapper);
         return "redirect:/notice/noticeAll";
     }
+
+    @GetMapping("/showAddNotice")
+    public String showAddNotice() {
+
+        return "html/notice/showAddNotice";
+
+    }
+
+    @PostMapping("/addNotice")
+    public String addNotice(NoticeInf noc) {
+        noticeInfDao.insert(noc);
+        return "redirect:/notice/noticeAll";
+    }
 }
