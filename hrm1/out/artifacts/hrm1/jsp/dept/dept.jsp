@@ -138,8 +138,8 @@
                 </c:forEach>
             </table>
             <!-- 分页标签 -->
-            <div align="center">
-                <p>当前是 ${page.pageNum}页 / ${page.pages} 页</p>
+            <div align="center" style="color: aqua">
+                <p>共有${page.total}条记录,当前是 ${page.pageNum}页 / ${page.pages} 页</p>
                 <ul class="pager">
                     <li>
                         <a href="/dept/showAll/?pageNum=${page.navigateFirstPage}&name=${deptInf.name}">首页</a>

@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql:///hrm?serverTimezone=GMT%2B8
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  thymeleaf:
+    cache: false
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+#      defaultEncoding: utf-8
+server:
+  tomcat:
+    uri-encoding: UTF-8
+  port: 9999
+logging:
+  level:
+    mybatis.mapper:
+      mapping: DEBUG
+pagehelper:
+  reasonable: true
+  supportMethodsArguments: true
+  auto-dialect: mysql
+mybatis-plus:
+  type-aliases-package: com.hrm.aynu_qhj.beans
+  mapper-locations: classpath*:mybatis/mapper/*.xml
+  configuration:
+    log-impl:  org.apache.ibatis.logging.stdout.StdOutImpl

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Hao
@@ -41,7 +42,7 @@
             </td>
         </tr>
     </table>
-    <form name="form1" method="post" action="${pageContext.request.contextPath}/newsLabel/Update/${editNewsLabel.ID}">
+    <form name="form1" method="post" action="${pageContext.request.contextPath}/newsLabel/Update/?id=${editNewsLabel.ID}">
         <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" class="table01">
             <tr>
                 <td class="td_02">栏目名称</td>
@@ -50,10 +51,13 @@
             </tr>
             <tr>
                 <td class="td_02">上级栏目名称</td>
-                <td class="td_02"><select name="parent.label_name" style="width:99% ">
-                    <option value="无">无</option>
-                    <option value="体育新闻" selected>体育新闻</option>
-                    <option value="娱乐新闻">娱乐新闻</option>
+                <td class="td_02"><select name="pid" style="width:99% ">
+                    <c:forEach items="${allParentLabel}" var="eachParent">
+                        <option value="${eachParent.ID}" <c:if test="${eachParent.ID}==${editNewsLabel.pid}">requierd</c:if>
+                        >${eachParent.label_name}</option>
+                    </c:forEach>
+
+
                 </select>
                 </td>
             </tr>

@@ -21,7 +21,7 @@
         function ajaxFunction(value) {
             let pages = 0;
             let id = value
-            window.location.href = "${pageContext.request.contextPath}/newsLabel/ajaxParentFlash/" + id + "/" + pages;
+            window.location.href = "${pageContext.request.contextPath}/newsLabel/ajaxParentFlash/?id="+id+"&pageNum=1";
         }
     </script>
 </head>
@@ -54,7 +54,7 @@
                 <td width="86%" class="td_02">
                     <select name="select" class="input" style="width:99%" onchange="ajaxFunction(this.value)"
                             id="selectId">
-                        <option value="" selected>------</option>
+                        <option value="0" selected>------</option>
                         <c:forEach var="eachParentLabel" items="${allParentLabel}">
                             <option value="${eachParentLabel.ID}">${eachParentLabel.label_name}</option>
                         </c:forEach>
@@ -92,15 +92,14 @@
             <tr>
                 <td colspan="5" align="right" class="td07"><img src="../../images/1.gif" width="4" height="5"
                                                                 align="absmiddle">
-                    <a href="/newsLabel/checkAll?pages=0"> 首页</a>　
+                    <a href="/newsLabel/checkAll?pageName=${page.navigateFirstPage}"> 首页</a>　
                     <img src="../../images/2.gif" width="3" height="5" align="absmiddle">
-                    <a href="javascript:history.back(-1)">上一页</a>
+                    <a href="/newsLabel/checkAll?pageName=${page.prePage}">上一页</a>
                     <img src="../../images/2-2.gif" width="3" height="5" align="absmiddle">
-                    <a href="/newsLabel/checkAll?pages=${pages}">下一页</a>
+                    <a href="/newsLabel/checkAll?pageName=${page.nextPage}">下一页</a>
                     <img src="../../images/3.gif" width="4" height="5" align="absmiddle">
-                    <a href="/newsLabel/checkAll?pages=${count-3}">末页</a>　　
-                    共 <fmt:parseNumber value="${count%3==0?0:1 + count/3}"
-                                       integerOnly="true"></fmt:parseNumber>页 ${count} 条记录
+                    <a href="/newsLabel/checkAll?pageName=${page.navigateLastPage}">末页</a>　　
+                    共${page.pageNum}/${page.pages}页 ${page.total} 条记录
                 </td>
             </tr>
             </td>
@@ -117,8 +116,7 @@
                     <td class="td07">${eachLabel.label_name}</td>
                     <td class="td07">${eachLabel.parent.label_name}</td>
                     <td class="td07">${eachLabel.label_content}</td>
-                    <td class="td07"><a href="${pageContext.request.contextPath}/newsLabel/deleteIt/${eachLabel.ID}"
-                                        onClick="shanchu()">删除</a></td>
+                    <td class="td07"><a href="${pageContext.request.contextPath}/newsLabel/deleteIt/${eachLabel.ID}">删除</a></td>
                         <%--                    如何小窗实现--%>
                     <td class="td07"><a href="${pageContext.request.contextPath}/newsLabel/queryById/${eachLabel.ID}"
                                         target="_self">修改</a>

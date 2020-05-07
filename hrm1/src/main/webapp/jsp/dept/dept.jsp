@@ -63,9 +63,9 @@
                     $.ligerDialog.confirm("确认要删除吗?", "删除部门", function (r) {
                         if (r) {
                             // alert("删除："+ids.get());
-                        // 发送请求
-                        window.location = "${pageContext.request.contextPath}/dept/removeDept/" + ids.get();
-                    }
+                            // 发送请求
+                            window.location = "${pageContext.request.contextPath}/dept/removeDept/" + ids.get();
+                        }
                     });
                 }
             })

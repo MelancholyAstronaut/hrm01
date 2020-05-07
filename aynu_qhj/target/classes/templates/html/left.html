@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="us">
+<head>
+    <title>人事管理系统 ——后台管理</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="/css/css.css" type="text/css" rel="stylesheet"/>
+    <script type="text/javascript" src="/js/jquery-1.11.0.js"></script>
+    <script type="text/javascript" src="/js/jquery-migrate-1.2.1.js"></script>
+    <script language="javascript" type="text/javascript">
+        $(function () {
+            /** 给左侧功能菜单绑定点击事件  */
+            $("td[id^='navbg']").click(function () {
+                /** 获取一级菜单的id */
+                var navbgId = this.id;
+                /** 获取对应的二级菜单id */
+                var submenuId = navbgId.replace('navbg', 'submenu');
+                /** 控制二级菜单显示或隐藏  */
+                $("#" + submenuId).toggle();
+                /** 控制关闭或者开启的图标*/
+                $("#" + navbgId).toggleClass("left_nav_expand");
+
+                /** 控制其他的一级菜单的二级菜单隐藏按钮都关闭  */
+                $("tr[id^='submenu']").not("#" + submenuId).hide();
+                /** 控制其他一级菜单的图片显示关闭  */
+                $("td[id^='navbg']").not(this).removeClass().addClass("left_nav_closed");
+
+
+            })
+        })
+    </script>
+</head>
+<body>
+<div style="margin:10px;background-color:#FFFFFF; text-align:left;">
+    <table width="200" height="100%" border="0" cellpadding="0" cellspacing="0" class="left_nav_bg">
+        <tr>
+            <td class="left_nav_top">
+                <div class="font1">用户管理</div>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td class="left_nav_bgshw" height="50">
+                <p class="left_nav_link"><img src="/images/left_nav_arrow.gif">&nbsp;&nbsp;<a
+                        href="/user/findUser" target="main">用户查询</a></p>
+                <p class="left_nav_link"><img src="/images/left_nav_arrow.gif">&nbsp;&nbsp;<a
+                        href="/user/toAddUser" target="main">添加用户</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td height="2"></td>
+        </tr>
+
+        <tr>
+            <td id="navbg1" class="left_nav_closed">
+                <div class="font1">部门管理</div>
+            </td>
+        </tr>
+        <tr valign="top" id="submenu1" style="display: none">
+            <td class="left_nav_bgshw" height="50">
+                <p class="left_nav_link"><img src="/images/left_nav_arrow.gif">&nbsp;&nbsp;<a
+                        href="/dept/showAll" target="main">部门查询</a></p>
+                <p class="left_nav_link"><img src="/images/left_nav_arrow.gif">&nbsp;&nbsp;<a
+                        href="/dept/showAddDept" target="main">添加部门</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td height="2"></td>
+        </tr>
+
+        <tr>
+            <td id="navbg2" class="left_nav_closed">
+                <div class="font1">职位管理</div>
+            </td>
+        </tr>
+        <tr valign="top" id="submenu2" style="display: none">
+            <td class="left_nav_bgshw" height="50">
+                <p class="left_nav_link"><img src="/images/left_nav_arrow.gif">&nbsp;&nbsp;<a
+                        href="/job/selectJob" target="main">职位查询</a></p>
+                <p class="left_nav_link"><img src="/images/left_nav_arrow.gif">&nbsp;&nbsp;<a
+                        href="/job/toShowAddJob" target="main">添加职位</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td height="2"></td>
+        </tr>
+
+        <tr>
+            <td id="navbg3" class="left_nav_closed">
+                <div class="font1">员工管理</div>
+            </td>
+        </tr>
+        <tr valign="top" id="submenu3" style="display: none">
+            <td class="left_nav_bgshw" height="50">
+                <p class="left_nav_link"><img src="/images/left_nav_arrow.gif">&nbsp;&nbsp;<a
+                        href="/employee/allEmployee" target="main">员工查询</a></p>
+                <p class="left_nav_link"><img src="/images/left_nav_arrow.gif">&nbsp;&nbsp;<a
+                        href="/employee/showAddEmployee" target="main">添加员工</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td height="2"></td>
+        </tr>
+
+        <tr>
+            <td id="navbg4" class="left_nav_closed">
+                <div class="font1">公告管理</div>
+            </td>
+        </tr>
+        <tr valign="top" id="submenu4" style="display: none">
+            <td class="left_nav_bgshw tdbtmline" height="50">
+                <p class="left_nav_link"><img src="/images/left_nav_arrow.gif">&nbsp;&nbsp;<a
+                        href="/notice/noticeAll" target="main">公告查询</a></p>
+                <p class="left_nav_link"><img src="/images/left_nav_arrow.gif">&nbsp;&nbsp;<a
+                        href="/notice/showAddNotice" target="main">添加公告</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td height="2"></td>
+        </tr>
+
+        <tr>
+            <td id="navbg5" class="left_nav_closed" onClick="showsubmenu(5)">
+                <div class="font1">下载中心</div>
+            </td>
+        </tr>
+        <tr valign="top" id="submenu5" style="display: none">
+            <td class="left_nav_bgshw tdbtmline" height="50">
+                <p class="left_nav_link"><img src="/images/left_nav_arrow.gif">&nbsp;&nbsp;<a
+                        href="/document/document" target="main">文档查询</a></p>
+                <!--11111-->
+                <p class="left_nav_link"><img src="/images/left_nav_arrow.gif">&nbsp;&nbsp;<a
+                        href="/document/showAddDocument" target="main">上传文档</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td height="2"></td>
+        </tr>
+
+        <tr valign="top">
+            <td height="100%" align="center">
+                <div class="copycct"><br/><strong>技术支持：</strong><br><strong>广东为学教育有限公司</strong><br>Http://www.fkjava.org
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td height="10"><img src="/images/left_nav_bottom.gif" height="10"/>
+            </td>
+        </tr>
+        <tr>
+            <td height="10" bgcolor="#e5f0ff">&nbsp;</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

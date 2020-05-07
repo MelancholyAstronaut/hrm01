@@ -33,7 +33,7 @@
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.29" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:5.2.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.2.0.RELEASE" />
-          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.8" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.10.3" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.8" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.8" />
           <element id="library" level="project" name="Maven: com.github.pagehelper:pagehelper:5.1.10" />

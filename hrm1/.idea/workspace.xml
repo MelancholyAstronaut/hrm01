@@ -6,7 +6,13 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dedabfc-b734-42b4-86dd-1bc6e72170ee" name="Default Changelist" comment="" />
+    <list default="true" id="5dedabfc-b734-42b4-86dd-1bc6e72170ee" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../aynu_qhj/src/main/resources/templates/html/dept/dept.html" beforeDir="false" afterPath="$PROJECT_DIR$/../aynu_qhj/src/main/resources/templates/html/dept/dept.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/hrm1/jsp/dept/dept.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/hrm1/jsp/dept/dept.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/spring-dao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring-dao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/dept/dept.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/dept/dept.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../olss" beforeDir="false" afterPath="$PROJECT_DIR$/../olss" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,6 +74,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -78,7 +87,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="D:/JavaDependency/apache-maven-3.6.2" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../JavaDependency/apache-maven-3.6.2" />
         <option name="userSettingsFile" value="D:\JavaDependency\settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -86,7 +95,6 @@
       <MavenImportingSettings>
         <option name="downloadDocsAutomatically" value="true" />
         <option name="downloadSourcesAutomatically" value="true" />
-        <option name="importAutomatically" value="true" />
         <option name="jdkForImporter" value="1.8" />
         <option name="vmOptionsForImporter" value="-Xmx768m" />
       </MavenImportingSettings>
@@ -97,9 +105,9 @@
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
   <component name="ProjectId" id="1Y4RqE302JnoVqmGbrtI7NDTYca" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -107,7 +115,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/com.hrm.job.dao" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.20176731" />
@@ -279,24 +287,6 @@
       </method>
     </configuration>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <option name="contentProportion" value="0.10382514" />
-          <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-            </expand>
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -341,11 +331,15 @@
       <workItem from="1583499421840" duration="197000" />
       <workItem from="1583502331082" duration="554000" />
       <workItem from="1583753458488" duration="710000" />
+      <workItem from="1587729731228" duration="282000" />
+      <workItem from="1587730169960" duration="112000" />
+      <workItem from="1587733789022" duration="176000" />
+      <workItem from="1587799722512" duration="100000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="548" y="250" key="#BuildArtifactsBeforeRunChooser" timestamp="1582782338065">
@@ -428,22 +422,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1311" height="340" key="GridCell.Tab.-1.right/0.0.1536.824@0.0.1536.824" timestamp="1582787306337" />
-    <state width="1493" height="167" key="GridCell.Tab.0.bottom" timestamp="1583754606997">
+    <state width="1311" height="186" key="GridCell.Tab.0.bottom" timestamp="1587730281981">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="167" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583754606997" />
-    <state width="1493" height="167" key="GridCell.Tab.0.center" timestamp="1583754606996">
+    <state width="1311" height="186" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587730281981" />
+    <state width="1311" height="186" key="GridCell.Tab.0.center" timestamp="1587730281981">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="167" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583754606996" />
-    <state width="1493" height="167" key="GridCell.Tab.0.left" timestamp="1583754606996">
+    <state width="1311" height="186" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587730281981" />
+    <state width="1311" height="186" key="GridCell.Tab.0.left" timestamp="1587730281981">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="167" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583754606996" />
-    <state width="1493" height="167" key="GridCell.Tab.0.right" timestamp="1583754606996">
+    <state width="1311" height="186" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587730281981" />
+    <state width="1311" height="186" key="GridCell.Tab.0.right" timestamp="1587730281981">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="167" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583754606996" />
+    <state width="1311" height="186" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587730281981" />
     <state width="1311" height="253" key="GridCell.Tab.1.bottom" timestamp="1583502884943">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
