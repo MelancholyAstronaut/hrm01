@@ -1,17 +1,13 @@
-
-1. **LeetCode**
-2. **Mybatis**
-3. **calculator**
+## 说明
 
 
+
+>aynu_HRM 是一个人事资源管理系统 springboot + mp
 
 ---
 
-*Mybatis ---->ch3是一个小样例*
+>  aynu_OAOS 是一个oa办公系统
 
-*Mybatis ---->ch4是一对一查询*
+---
 
-*Mybatis ---->ch5是一对多查询*
-
-*Mybatis ---->ch6是一对一延迟加载*
-
+​	
